@@ -2,13 +2,24 @@ import time
 
 def begining():
     print("Welcome to Connect 4!")
+    time.sleep(2)
     print("If you are new to Connect 4 (reproduced by Bud and Jonathan) press 1")
     print("If you are familiar with Connect 4 (reproduced by Bud and Jonathan press 2)")
     userinput = input("> ")
     if userinput == "1":
-        print("")
+        print("Welcome to the rules.")
+        time.sleep(2)
+        print("As you will see when you begin, the game board consists of a 8x8 grid of boxes, each collumm is marked with a number (1-8).")
+        time.sleep(4)
+        print("To place a piece type the number that corresponds to the row that you wish to play into.")
+        time.sleep(3)
+        print("This is a two player game, each player will alternate placing pieces, one piece at a time.")
+        time.sleep(3)
+        print("To win, create a linear chain of four pieces horizontally, vertically, or diagonally.")
+        time.sleep(3)
     elif userinput == "2":
         print("Transporting to Game Zone")
+        time.sleep(2)
     else:
         begining()
 
@@ -32,7 +43,7 @@ done = False
 def place(player):
     printboard()
     done = False
-    tmpuser = input("{} where would you like to go? ".format(player))
+    tmpuser = input("{}, please select a collumn. ".format(player))
     tmpuser = int(tmpuser) - 1
     for item in array:
         print(item[tmpuser])
@@ -68,7 +79,7 @@ def place(player):
                 return
             done = True
     if done != True:
-        #print("here")
+        
         
         line0[tmpuser] = player
         return
