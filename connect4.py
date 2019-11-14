@@ -87,10 +87,7 @@ def place(player):
     printboard()
 def checkwinner():
 def checkh():
-
-
-=======
-            
+      
 def winner(player):
     print("Congratulations, {}, has won.".format(player))
     print("")
@@ -104,6 +101,7 @@ def winner(player):
     print("       --        ")
     print("      ----       ")
     print("    --------     ")
+
 
 def printboard():
     print("['1', '2', '3', '4', '5', '6', '7', '8']")
