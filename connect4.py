@@ -79,8 +79,6 @@ def checkwinner():
 def checkh():
 
 
-def winner():
-    pass
 =======
             
 def winner(player):
