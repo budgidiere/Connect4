@@ -51,7 +51,7 @@ def place(player):
             pass
         elif item[tmpuser] != " ":
             if line7[tmpuser] == "X" or line7[tmpuser] == "O":
-                print("Invalid position try again.")
+                print("Invalid positioning, please try again.")
                 place(player)
                 return
             elif line6[tmpuser] == "X" or line6[tmpuser] == "O":
@@ -82,7 +82,6 @@ def place(player):
         line0[tmpuser] = player
         return
     printboard()
-
 def checkwinner():
     if checkHV("X", array) == True or checkHV("X", fliparray(array)):
         return "X"
