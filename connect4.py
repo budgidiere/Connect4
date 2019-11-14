@@ -43,7 +43,7 @@ done = False
 def place(player):
     printboard()
     done = False
-    tmpuser = input("{}, please select a collumn. ".format(player))
+    tmpuser = input("{}, please select a column. ".format(player))
     tmpuser = int(tmpuser) - 1
     for item in array:
         print(item[tmpuser])
