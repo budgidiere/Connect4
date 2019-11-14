@@ -72,6 +72,8 @@ def place(player):
         return
     printboard()
             
+def winner():
+    pass
 
 def printboard():
     print("['1', '2', '3', '4', '5', '6', '7', '8']")
@@ -80,5 +82,9 @@ def printboard():
     print(" ")
 
 while True:
-    place("X")
-    place("O")
+    checkwinner
+    if gameover != True:
+        place("X")
+        place("O")
+    else:
+        winner()
