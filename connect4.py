@@ -72,8 +72,19 @@ def place(player):
         return
     printboard()
             
-def winner():
-    pass
+def winner(player):
+    print("Congratulations, {}, has won.".format(player))
+    print("")
+    print("   ----------    ")
+    print("  -          -   ")
+    print("   -        -    ")
+    print("    -      -     ")
+    print("     -    -      ")
+    print("      -  -       ")
+    print("      -  -       ")
+    print("       --        ")
+    print("      ----       ")
+    print("    --------     ")
 
 def printboard():
     print("['1', '2', '3', '4', '5', '6', '7', '8']")
