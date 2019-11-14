@@ -85,6 +85,8 @@ def place(player):
         line0[tmpuser] = player
         return
     printboard()
+def checkwinner():
+def checkh():
             
 def winner(player):
     print("Congratulations, {}, has won.".format(player))
@@ -107,7 +109,7 @@ def printboard():
     print(" ")
 
 while True:
-    checkwinner
+    checkwinner()
     if gameover != True:
         place("X")
         place("O")
