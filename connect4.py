@@ -54,9 +54,6 @@ def place(player):
             #print("here2")
             if line7[tmpuser] == "X" or line7[tmpuser] == "O":
                 print("Invalid positioning, please try again.")
-                
-            if line7[tmpuser] == "X" or line7[tmpuser] == "O":
-                print("Invalid positioning, please try again.")
                 place(player)
                 return
             elif line6[tmpuser] == "X" or line6[tmpuser] == "O":
