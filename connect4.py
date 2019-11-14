@@ -4,7 +4,7 @@ def begining():
     print("Welcome to Connect 4!")
     time.sleep(2)
     print("If you are new to Connect 4 (reproduced by Bud and Jonathan) press 1")
-    print("If you are familiar with Connect 4 (reproduced by Bud and Jonathan press 2)")
+    print("If you are familiar with Connect 4 (reproduced by Bud and Jonathan) press 2")
     userinput = input("> ")
     if userinput == "1":
         print("Welcome to the rules.")
@@ -48,10 +48,8 @@ def place(player):
     for item in array:
         print(item[tmpuser])
         if item[tmpuser] == " ":
-            #print("here1")
             pass
         elif item[tmpuser] != " ":
-            #print("here2")
             if line7[tmpuser] == "X" or line7[tmpuser] == "O":
                 print("Invalid position try again.")
                 place(player)
@@ -95,22 +93,13 @@ def checkwinner():
 
 def checkHV(check, inputarray):
     for item in inputarray:
-        #print(item)
-        #print("here1")
         i = 0
         for char in item:
-            #print(char)
-            #print("here3")
             if char == check:
-                #print("here4")
                 charlist = []
                 for item2 in item[i:i+4]:
-                    #print("here5")
-                    #print(item2)
                     charlist.append(item2)
-                #print(charlist)
                 if charlist == [check, check, check, check]:
-                    #print("here6")
                     return True
             i = i + 1
     return False
@@ -154,7 +143,6 @@ def printboard():
 while True:
     if checkwinner() == "no":
         place("X")
-        
     if checkwinner() == "no":
         place("O")
     else:
