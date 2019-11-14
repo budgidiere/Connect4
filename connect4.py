@@ -86,7 +86,11 @@ def place(player):
         return
     printboard()
 def checkwinner():
-def checkh():
+    
+def checkHV():
+ 
+def fliparray():
+    
       
 def winner(player):
     print("Congratulations, {}, has won.".format(player))
