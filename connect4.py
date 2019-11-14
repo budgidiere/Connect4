@@ -42,7 +42,7 @@ def place(player):
     printboard()
     done = False
     tmpuser = input("{}, please select a collumn. ".format(player))
-    tmpuser = int(tmpuser)
+    tmpuser = int(tmpuser) - 1
     for item in array:
         print(item[tmpuser])
         if item[tmpuser] == " ":
@@ -50,28 +50,32 @@ def place(player):
             pass
         elif item[tmpuser] != " ":
             #print("here2")
-            if line7[tmpuser] == "X" or line7[tmpuser] == "Z":
+            if line7[tmpuser] == "X" or line7[tmpuser] == "O":
                 print("Invalid positioning, please try again.")
-                place()
-            elif line6[tmpuser] == "X" or line6[tmpuser] == "Z":
+                
+            if line7[tmpuser] == "X" or line7[tmpuser] == "O":
+                print("Invalid positioning, please try again.")
+                place(player)
+                return
+            elif line6[tmpuser] == "X" or line6[tmpuser] == "O":
                 line7[tmpuser] = player
                 return
-            elif line5[tmpuser] == "X" or line5[tmpuser] == "Z":
+            elif line5[tmpuser] == "X" or line5[tmpuser] == "O":
                 line6[tmpuser] = player
                 return
-            elif line4[tmpuser] == "X" or line4[tmpuser] == "Z":
+            elif line4[tmpuser] == "X" or line4[tmpuser] == "O":
                 line5[tmpuser] = player
                 return
-            elif line3[tmpuser] == "X" or line3[tmpuser] == "Z":
+            elif line3[tmpuser] == "X" or line3[tmpuser] == "O":
                 line4[tmpuser] = player
                 return
-            elif line2[tmpuser] == "X" or line2[tmpuser] == "Z":
+            elif line2[tmpuser] == "X" or line2[tmpuser] == "O":
                 line3[tmpuser] = player
                 return
-            elif line1[tmpuser] == "X" or line1[tmpuser] == "Z":
+            elif line1[tmpuser] == "X" or line1[tmpuser] == "O":
                 line2[tmpuser] = player
                 return
-            elif line0[tmpuser] == "X" or line0[tmpuser] == "Z":
+            elif line0[tmpuser] == "X" or line0[tmpuser] == "O":
                 line1[tmpuser] = player
                 return
             done = True
@@ -84,10 +88,11 @@ def place(player):
             
 
 def printboard():
+    print("['1', '2', '3', '4', '5', '6', '7', '8']")
     for item in array:
         print(item)
     print(" ")
 
 while True:
     place("X")
-    place("Z")
+    place("O")
