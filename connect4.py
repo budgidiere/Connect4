@@ -31,7 +31,7 @@ def place(player):
     printboard()
     done = False
     tmpuser = input("{} where would you like to go? ".format(player))
-    tmpuser = int(tmpuser) - 1
+    tmpuser = int(tmpuser - 1 )
     for item in array:
         print(item[tmpuser])
         if item[tmpuser] == " ":
@@ -74,7 +74,10 @@ def place(player):
 
 def checkwinner():
     
-def checkh():
+def checkHV():
+ 
+def fliparray():
+    
       
 def winner(player):
     print("Congratulations, {}, has won.".format(player))
