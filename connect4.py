@@ -102,6 +102,8 @@ def checkHV(check, inputarray):
                     return True
             i = i + 1
     return False
+def checkV(check, inputarray):
+    pass
 def fliparray(oldarray):
     h0 = []
     h1 = []
