@@ -83,23 +83,27 @@ def place(player):
         return
     printboard()
 def checkwinner():
-    if checkHV("X", array) == True or checkHV("X", fliparray(array)):
-        return "X"
-    elif checkHV("O", array) == True or checkHV("O", fliparray(array)):
-        return "O"
+    vcheck = checkHV(array)
+    hcheck = checkHV(fliparray(array))
+    print("{}, {}".format(vcheck, hcheck))
+    if vcheck != False:
+        return vcheck
+    elif hcheck != False:
+        return hcheck
     else:
         return checkD(array)
 
-def checkHV(check, inputarray):
+def checkHV(inputarray):
     for item in inputarray:
         i = 0
         for char in item:
-            if char == check:
-                charlist = []
-                for item2 in item[i:i+4]:
+            if char == "X" or char == "O":
+                charlist = [char]
+                for item2 in item[i+1:i+4]:
                     charlist.append(item2)
-                if charlist == [check, check, check, check]:
-                    return True
+                if charlist == [char, char, char, char]:
+                    print("here2")
+                    return char
             i = i + 1
     return False
 def checkD(inputarray):
@@ -152,11 +156,18 @@ def printboard():
         print(item)
     print(" ")
 
+winnercheck = "no"
+i = 0
 while True:
-    if checkwinner() == "no":
+    if winnercheck == "no":
         place("X")
-    if checkwinner() == "no":
+    winnercheck = checkwinner()
+    if winnercheck != "no":
+        winner(winnercheck)
+        exit()
+    if winnercheck == "no":
         place("O")
-    else:
-        winner(checkwinner())
+    winnercheck = checkwinner()
+    if winnercheck != "no":
+        winner(winnercheck)
         exit()
