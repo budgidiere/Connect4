@@ -1,3 +1,5 @@
+#budgidiere/connect4 RC1
+
 import time
 
 def begining():
