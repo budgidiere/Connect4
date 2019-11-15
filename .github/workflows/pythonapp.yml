@@ -27,7 +27,7 @@ jobs:
     - name: Test with pytest
       run: |
         pip install pytest
-        pytest
+        pytest connect4.py
     #- name: Cache
     #  uses: actions/cache@v1.0.0
     #- name: GH Release
