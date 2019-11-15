@@ -28,7 +28,7 @@ jobs:
       run: |
         pip install pytest
         pytest
-    - name: Cache
-      uses: actions/cache@v1.0.0
-    - name: GH Release
-      uses: softprops/action-gh-release@v0.1.0
+    #- name: Cache
+    #  uses: actions/cache@v1.0.0
+    #- name: GH Release
+    #  uses: softprops/action-gh-release@v0.1.0
