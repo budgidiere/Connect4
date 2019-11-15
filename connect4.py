@@ -105,13 +105,13 @@ def checkHV(check, inputarray):
 def checkD(inputarray):
     for r in range(8):
         for c in range(8):
-            print("{}, {}, {}".format(r,c,array[r][c]))
             if array[r][c] == "X" or array[r][c] == "O":
                 if (r + 3 < 8 and r >= 0) and (c + 3 < 8 and c >=0):
-                    if array[r][c] == array[r-1][c+1] and array[r-1][c+1] == array[r-2][c+2] and array[r-2][c+2] == array[r-3][c+3]:
+                    if array[r][c] == array[r+1][c-1] and array[r+1][c-1] == array[r+2][c-2] and array[r+2][c-2] == array[r+3][c-3]:
                         return array[r][c]
-                if r + 1 < 8 and r - 2 >= 0 and c + 1 < 8 and c - 2 >= 0:
-                    if array[r+1][c+1] == array[r][c] and array[r-1][c-1] == array[r][c] and array[r-2][c-2] == array[r][c]:
+                if (c - 3 < 8 and c >= 0) and (r - 3 < 8 and r >= 0):
+                    print("here")
+                    if array[r][c] == array[r-1][c-1] and array[r-1][c-1] == array[r-2][c-2] and array[r-2][c-2] == array[r-3][c-3]:
                         return array[r][c]
     return "no"                
 def fliparray(oldarray):
@@ -131,6 +131,7 @@ def fliparray(oldarray):
     
       
 def winner(player):
+    printboard()
     print("Congratulations, {}, has won.".format(player))
     print("")
     print("   ----------    ")
