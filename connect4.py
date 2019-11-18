@@ -24,9 +24,10 @@ def begining():
         time.sleep(2)
     else:
         begining()
-
-begining()
-
+try:
+    begining()
+except Exception:
+    exit()
 line0 = [" ", " ", " ", " ", " ", " ", " ", " "]
 line1 = [" ", " ", " ", " ", " ", " ", " ", " "]
 line2 = [" ", " ", " ", " ", " ", " ", " ", " "]
