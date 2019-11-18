@@ -91,7 +91,7 @@ def place(player):
 def checkwinner():
     vcheck = checkHV(array)
     hcheck = checkHV(fliparray(array))
-    print("{}, {}".format(vcheck, hcheck))
+    #print("{}, {}".format(vcheck, hcheck))
     if vcheck != False:
         return vcheck
     elif hcheck != False:
@@ -108,7 +108,7 @@ def checkHV(inputarray):
                 for item2 in item[i+1:i+4]:
                     charlist.append(item2)
                 if charlist == [char, char, char, char]:
-                    print("here2")
+                    #print("here2")
                     return char
             i = i + 1
     return False
@@ -120,7 +120,7 @@ def checkD(inputarray):
                     if array[r][c] == array[r+1][c-1] and array[r+1][c-1] == array[r+2][c-2] and array[r+2][c-2] == array[r+3][c-3]:
                         return array[r][c]
                 if (c - 3 < 8 and c >= 0) and (r - 3 < 8 and r >= 0):
-                    print("here")
+                    #print("here")
                     if array[r][c] == array[r-1][c-1] and array[r-1][c-1] == array[r-2][c-2] and array[r-2][c-2] == array[r-3][c-3]:
                         return array[r][c]
     return "no"                
