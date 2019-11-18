@@ -1,9 +1,10 @@
-#budgidere/master
+# budgidere/master
 
 import time
 
+
 def begining():
-    print("Welcome to Connect 4!")
+        print("Welcome to Connect 4!")
     time.sleep(2)
     print("If you are new to Connect 4 (reproduced by Bud and Jonathan) press 1")
     print("If you are familiar with Connect 4 (reproduced by Bud and Jonathan) press 2")
@@ -11,7 +12,8 @@ def begining():
     if userinput == "1":
         print("Welcome to the rules.")
         time.sleep(2)
-        print("As you will see when you begin, the game board consists of a 8x8 grid of boxes, each collumm is marked with a number (1-8).")
+        print("As you will see when you begin, the game board consists of a\
+            8x8 grid of boxes, each collumm is marked with a number (1-8).")
         time.sleep(4)
         print("To place a piece type the number that corresponds to the row that you wish to play into.")
         time.sleep(3)
@@ -24,6 +26,8 @@ def begining():
         time.sleep(2)
     else:
         begining()
+
+
 try:
     begining()
 except Exception:
@@ -40,6 +44,7 @@ line7 = [" ", " ", " ", " ", " ", " ", " ", " "]
 array = [line7, line6, line5, line4, line3, line2, line1, line0]
 
 list8 = [0,1,2,3,4,5,6,7]
+
 
 done = False
 
@@ -79,9 +84,7 @@ def place(player):
                 line1[tmpuser] = player
                 return
             done = True
-    if done != True:
-        
-        
+    if done == False:
         line0[tmpuser] = player
         return
     printboard()
